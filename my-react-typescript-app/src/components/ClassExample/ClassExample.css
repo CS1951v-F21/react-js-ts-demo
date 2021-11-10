@@ -1,0 +1,8 @@
+/* If you want .scss then you would need to add node-sass */
+
+.classExample-container {
+    background: orange;
+    margin-top: 10px;
+    padding: 3px 10px;
+    border-radius: 5px;
+}

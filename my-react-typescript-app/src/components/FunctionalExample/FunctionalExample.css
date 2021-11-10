@@ -1,0 +1,13 @@
+/* If you want .scss then you would need to add node-sass */
+
+.functionalExample-container {
+    background: brown;
+    padding: 3px 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+    height: fit-content;
+}
