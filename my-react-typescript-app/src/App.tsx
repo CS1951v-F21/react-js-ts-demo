@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { ClassExample, FunctionalExample } from './components';
+import { ClassExample, FunctionalExample, PromiseExample, TimeExample } from './components';
 import donutImage from './static/donut.png';
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
         </p>
         <FunctionalExample/>
         <ClassExample/>
+        <TimeExample />
+        <PromiseExample />
       </header>
     </div>
   );

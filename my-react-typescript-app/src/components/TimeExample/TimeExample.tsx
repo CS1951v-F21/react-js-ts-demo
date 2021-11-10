@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TimeExample.css'
 
 interface ITimeProps{
@@ -13,7 +13,9 @@ export const TimeExample = (props: ITimeProps) => {
     /* Example to demonstrate setInterval */
     const setIntervalExample = ():JSX.Element => {
         const intervalCallback = () => {
+            setCount(count + 1)
             console.log('I got called by setInterval()')
+            console.log(new Date())
         }
 
         const click = () => {
@@ -21,7 +23,7 @@ export const TimeExample = (props: ITimeProps) => {
             setInterval(intervalCallback, 3000)
         }
 
-        return (<div className="button" onClick={() => click()}>
+        return (<div className="timeButton" onClick={() => click()}>
             Set Interval
         </div>)
     }
@@ -31,6 +33,7 @@ export const TimeExample = (props: ITimeProps) => {
 
         const timeoutCallback = () => {
             console.log('I got called by setTimeout()')
+            console.log(new Date())
         }
 
         const click = () => {
@@ -38,13 +41,16 @@ export const TimeExample = (props: ITimeProps) => {
             setTimeout(timeoutCallback, 3000)
         }
 
-        return (<div className="button" onClick={() => click()}>
+        return (<div className="timeButton" onClick={() => click()}>
             Set Timeout
         </div>)
     }
 
+    const [count, setCount] = useState<number>(0)
+
     return (
         <div className="timeExample-container">
+            {count}
             {setTimeoutExample()}
             {setIntervalExample()}
         </div>
